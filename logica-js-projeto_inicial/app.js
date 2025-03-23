@@ -1,12 +1,14 @@
 alert('Boas vindas');
-let numeroSecreto = parseInt(Math.random()*100+1);
+let numeroMinimo=10
+let numeroMaximo=20
+let numeroSecreto = parseInt(Math.random()*numeroMaximo)+numeroMinimo;
 console.log(numeroSecreto)
 let chute;
 let tentativas=1;
 
 //enquanto chute nao for igual ao n.s
 while (chute != numeroSecreto) {
-    chute = prompt('Escolha um número entre 1 e 100');
+    chute = prompt(`Escolha um número entre ${numeroMinimo} e ${numeroMaximo}`);
     if (numeroSecreto == chute) {
         break;
     } else {
